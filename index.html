@@ -3,19 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <header>
-      <a href=""><img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина Device"></a>
+      <a href=""><img src="img/logo-device.svg" width="163" height="35" alt="Девайс"></a>
       <nav>
-        <!-- Здесь будет input для поиска -->
+        <div>
+          <span></span>
+          <form action="https://echo.htmlacademy.ru/" method="POST">
+            <input type="search" name="searchText" placeholder="Поиск по сайту">
+            <button type="submit">Найти</button>
+          </form>
+        </div>        <!-- Здесь будет input для поиска -->
         <ul>
           <li><button type="button">Войти</button></li>
           <li><a href="">Сравнить</a></li>
           <li><a href="">Корзина</a></li>
         </ul>
         <ul>
-          <li>Каталог товаров <span>+</span>
+          <li>Каталог товаров <span></span>
             <ul>
               <li><a href="inner.html">Виртуальная реальность</a></li>
               <li><a href="inner.html">Моноподы для селфи</a></li>
@@ -34,18 +41,18 @@
       </nav>
     </header>
     <main>
-      <h1>Магазин гаджетов с оригинальным дизайном</h1>
+      <h1 class="visually-hidden">Магазин гаджетов с оригинальным дизайном</h1>
       <section>
-        <h2>Промо-акции</h2>
+        <h2 class="visually-hidden">Промо-акции</h2>
         <div>
-          <button type="button"></button>
-          <button type="button"></button>
-          <button type="button"></button>
+          <button type="button" aria-label="Переключить на промо самой длинной селфи палки"></button>
+          <button type="button" aria-label="Переключить на промо мотивируещего фитне-браслета"></button>
+          <button type="button" aria-label="Переключить на промо квардрокоптера с мощным лазером"></button>
         </div>
         <hr>
         <div>
           <img src="img\slider-1.png" width="384"  height="486" alt="Самая длинная палка для селфи">
-          <span>01</span>
+          <span></span>
           <p>
             Делай селфи,<br>
             как Бен Стиллер!
@@ -55,18 +62,24 @@
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a href="">Подробнее</a>
-          <dl>
-            <dt>8,5 м</dt>
-              <dd>Длина палки</dd>
-            <dt>5 кг</dt>
-              <dd>Вес палки</dd>
-            <dt>Карбон</dt>
-              <dd>Материал</dd>
-          </dl>
+          <div>
+            <p>
+              <span>Длина палки</span>
+              <span>8,5 <abbr title="метров">м</abbr></span>
+            </p>
+            <p>
+              <span>Вес палки</span>
+              <span>5 <abbr title="Килограмм">кг</abbr></span>
+            </p>
+            <p>
+              <span>Материал</span>
+              <span>Карбон</span>
+            </p>
+          </div>
         </div>
         <div>
           <img src="img\slider-2.png" width="345"  height="485" alt="Мотивирующие фитнес-браслеты">
-          <span>02</span>
+          <span></span>
           <p>
             Худеем<br>
             правильно!
@@ -76,14 +89,16 @@
             не пропускать занятия и соблюдать диету.
           </p>
           <a href="">Подробнее</a>
-          <dl>
-            <dt>48 часов</dt>
-              <dd>Без подзарядки</dd>
-          </dl>
+          <div>
+            <p>
+              <span>Без подзарядки</span>
+              <span>48 часов</span>
+            </p>
+          </div>
         </div>
         <div>
           <img src="img\slider-3.png" width="526"  height="334" alt="Квадрокоптер c мощным лазером">
-          <span>03</span>
+          <span></span>
           <p>
             Порхает как бабочка,<br>
             жалит как пчела!
@@ -93,16 +108,20 @@
             мощным лазером, замаскированным под стандартную камеру.
           </p>
           <a href="">Подробнее</a>
-          <dl>
-            <dt>800 м</dt>
-              <dd>Дальность полета</dd>
-            <dt>50 м</dt>
-              <dd>Радиус поражения</dd>
-          </dl>
+          <div>
+            <p>
+              <span>Дальность полета</span>
+              <span>800 <abbr title="метров">м</abbr></span>
+            </p>
+            <p>
+              <span>Радиус поражения</span>
+              <span>50 <abbr title="метров">м</abbr></span>
+            </p>
+          </div>
         </div>
       </section>
       <section>
-        <h2>Популярные разделы каталога</h2>
+        <h2 class="visually-hidden">Популярные разделы каталога</h2>
         <ul>
           <li>
             <a href="inner.html">
@@ -143,14 +162,12 @@
         </ul>
       </section>
       <section>
-        <h2>Сервисы</h2>
+        <h2 class="visually-hidden">Сервисы</h2>
         <div>
-          <button type="button"></button>
-          <button type="button"></button>
-          <button type="button"></button>
+          <button type="button">Доставка</button>
+          <button type="button">Гарантия</button>
+          <button type="button">Кредит</button>
         </div>
-        <!-- вертикальная черта-разделитель -->
-        <span></span>
         <div>
           <p>Доставка</p>
           <p>
@@ -158,8 +175,7 @@
             подъезду совершенно бесплатно! Ведь мы неплохо<br>
             заработаем, поднимая его на ваш этаж.
           </p>
-          <!--контекстная картинка -->
-          <span></span>
+          <!--контекстная картинка на псевдоэлементе -->
         </div>
         <div>
           <p>Гарантия</p>
@@ -168,8 +184,7 @@
             дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.
           </p>
-          <!--контекстная картинка -->
-          <span></span>
+          <!--контекстная картинка на псевдоэлементе -->
         </div>
         <div>
           <p>Кредит</p>
@@ -178,17 +193,16 @@
             консультанты подберут для вас наиболее выгодные<br>
             условия кредита. Выгодные для нашего банка, разумеется.
           </p>
-          <!--контекстная картинка -->
-          <span></span>
+          <!--контекстная картинка на псевдоэлементе -->
         </div>
       </section>
       <section>
-        <h2>Логотипы</h2>
+        <h2 class="visually-hidden">Логотипы</h2>
         <ul>
-          <li><img src="https://via.placeholder.com/260x100" alt="Логотип djl"></li>
-          <li><img src="https://via.placeholder.com/260x100" alt="Логотип SP Gadjet"></li>
-          <li><img src="https://via.placeholder.com/260x100" alt="Логотип GoPro"></li>
-          <li><img src="https://via.placeholder.com/260x100" alt="Логотип Vive"></li>
+          <li><img src="img/logo-1.png" alt="Логотип djl"></li>
+          <li><img src="img/logo-2.png" alt="Логотип SP Gadjet"></li>
+          <li><img src="img/logo-3.png" alt="Логотип GoPro"></li>
+          <li><img src="img/logo-4.png" alt="Логотип Vive"></li>
         </ul>
       </section>
       <section>
@@ -210,7 +224,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <figure>
-          <a href=""><img src="img/map.jpg" width="560" height="222" alt="Мы на карте"></a>
+          <a href=""><img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу Москва, улица Строителей, 15"></a>
         </figure>
         <p>
           <button type="button">Напишите нам</button>
@@ -218,18 +232,16 @@
       </section>
     </main>
     <footer>
-      <a href=""><img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина Device"></a>
+      <a href=""><img src="img/logo-device.svg" width="163" height="35" alt="Девайс"></a>
       <ul>
         <li><button type="button">Войти</button></li>
         <li><a href="">Сравнить</a></li>
         <li><a href="">Корзина</a></li>
       </ul>
-      <!-- адрес -->
       <div>
         <address>г. Москва, ул. Строителей, 15</address>
         <hr> <!--декоративный элемент -->
       </div>
-      <!-- меню, соцсети -->
       <div>
         <ul>
           <li><a href="">Доставка</a></li>
@@ -237,34 +249,45 @@
           <li><a href="">Контакты</a></li>
         </ul>
         <ul>
-          <li><a href="">Фейсбук</a></li>
-          <li><a href="">Инстграмм</a></li>
-          <li><a href="">Твиттер</a></li>
+          <li><a href="" aria-label="Мы на Фейсбук"></a></li>
+          <li><a href="" aria-label="Мы в Инстграмм"></a></li>
+          <li><a href="" aria-label="Мы в Твиттер"></a></li>
         </ul>
-
       </div>
-      <!-- телефон -->
       <div>
         <p>
-          <a href="tel: +74954959595">Тел.: +7 (495) 495-95-95</a>
+          <a href="tel: +74954959595" aria-label="Позвонить +74954959595">Тел.: +7 (495) 495-95-95</a>
         </p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><span>HTML Academy</span></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив от HTML Academy, «Профессиональный HTML и CSS, уровень 1"><span></span></a>
       </div>
     </footer>
-    <section>
+    <!-- <section>
       <h2>Личный кабинет</h2>
       <p>Введите пожалуйста свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
       <button type="button">Закрыть</button>
-    </section>
-    <section>
-      <h2>Напишите нам</h2>
-      <!-- Здесь будет форма -->
-      <button type="button">Закрыть</button>
-    </section>
-    <section>
-      <h2>Как до нас добраться</h2>
-      <button type="button">Закрыть</button>
-    </section>
+    </section> -->
+    <div>
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <div>
+          <label for="writerNameId">Ваше имя:</label>
+          <input id="writerNameId" type="text" name="writerName" placeholder="Имя Фамилия" aria-label="Имя и фамилия">
+        </div>
+        <div>
+          <label for="writerEmailId">Ваш e-mail:</label>
+          <input id="writerEmailId" type="text" name="writerEmail" placeholder="email@example.com" aria-label="Адрес электронной почты">
+        </div>
+        <div>
+          <label for="writerTextId">Текст письма:</label>
+          <textarea id="writerTextId" name="writerText" rows="8" cols="80" placeholder="В свободной форме" aria-label="Текст обращения, в свободной форме"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button" aria-label="Закрыть форму обращения"></button>
+    </div>
+    <div>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <button type="button" aria-label="Закрыть интерактивную карту"></button>
+    </div>
   </body>
 </html>
