@@ -1,3 +1,29 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroylight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensanslight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -7,4 +33,385 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 47px;
+}
+
+.header {
+  width: 1160px;
+  height: 299px;
+  margin-top: 40px;
+  position: relative;
+  background-color: #f7e296;
+}
+
+.container {
+  display: flex;
+  width: 1160px;
+  justify-content: center;
+}
+
+.topLogo {
+  position: absolute;
+  left: 60px;
+  top: -18px;
+}
+
+.hovering:hover {
+  opacity: 0.6;
+}
+
+.hovering:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.halfMenu {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 49px;
+  margin: 0 19.5px;
+}
+
+nav,
+.container {
+  background-color: inherit;
+}
+
+nav .container {
+  height: 82px;
+  padding-top: 33px;
+}
+
+nav .container:last-child {
+  padding-top: 17px;
+}
+
+.text {
+  border: none;
+  background-color: inherit;
+  color: black;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: -0.1px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.text.noHover:hover,
+.text.noHover:active {
+  color: rgb(0, 0, 0);
+}
+
+.iconed {
+  position: relative;
+}
+
+.iconed::before {
+  content: "";
+  width: 30px;
+  height: 16px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.searchControl {
+  position: relative;
+  margin-top: 0px;
+  align-items: baseline;
+  /* border-bottom: 2px solid black; */
+}
+
+.searchIcon::before {
+  top: -13px;
+  left: 2px;
+  background-image: url("/img/search.svg");
+}
+
+.searchText {
+  flex-grow: 1;
+  height: inherit;
+  padding-left: 37px;
+  opacity: 0.4;
+}
+
+.searchButton {
+  display: none;
+  margin-left: 10px;
+  width: 85px;
+  height: 47px;
+  border: 2px solid black;
+  border-bottom: none;
+}
+
+.searchButton:hover {
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+
+.searchButton:active {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.login {
+  margin-left: 26px;
+  margin-right: 18px;
+}
+
+.login .iconed::before {
+  top: 4px;
+  left: -26px;
+  background-image: url("/img/user.svg");
+}
+
+.logout button {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.compare {
+  margin-left: auto;
+}
+
+.compare .iconed::before {
+  top: 6px;
+  left: -20px;
+  background-image: url("/img/compare.svg");
+}
+
+.cart {
+  padding-right: 0px;
+  margin-left: 62px;
+}
+
+.cart .iconed::before {
+  top: 4px;
+  left: -21px;
+  background-image: url("/img/cart.svg");
+}
+
+.mainItem {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  letter-spacing: 3.6px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainItem:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.mainItem:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.mainItem.menuCatalog {
+  position: relative;
+  margin-left: -2px;
+}
+
+.menuCatalog::after {
+  content: "";
+  width: 100px;
+  height: 16px;
+  opacity: 0.3;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 3px;
+  left: 231px;
+  background-image: url("/img/plus.svg");
+}
+
+.menuCatalog:hover > .subMenu {
+  display: flex;
+}
+
+.subMenu {
+  display: none;
+  /* display: flex; */
+  height: 130px;
+  margin-top: 22px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: pink;
+}
+
+.subMenu li {
+  width: 240px;
+  height: 38px;
+  line-height: 36px;
+}
+
+.subMenu li:nth-child(n+4) {
+  width: 200px;
+}
+
+
+
+
+
+footer .svg {
+  fill: rgb(240, 197, 46);
+}
+
+.menuContacts {
+  margin-left: auto;
+  margin-right: -4px;
+}
+
+.menuDeliver {
+  margin-right: 34px;
+}
+
+
+
+.popular a{
+  display: inline-block;
+  width: 160px;
+  background-image: linear-gradient(rgba(240, 197, 46, 0.5), rgba(240, 197, 46, 0.5));
+  background-size: 160px 160px;
+  background-repeat: no-repeat;
+}
+
+.popular div > div{
+  position: relative;
+  width: auto;
+  height: 160px;
+}
+
+.popular a:hover,
+.popular a:active
+{
+  background-image: linear-gradient(rgba(240, 197, 46, 1), rgba(240, 197, 46, 1));
+}
+
+.popular a > div:active {
+  opacity: 0.3;
+}
+
+.popular img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.popular h3{
+  display: inline-block;
+  width: 160px;
+  margin-top: 33px;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.logos img{
+  opacity: 0.2;
+  filter: grayscale(1);
+}
+
+.logos img:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.aboutUs ul{
+  padding-top: 50px;
+  padding-bottom: 33px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.aboutUs p {
+  margin-top: 30px;
+}
+
+footer {
+  background-color: rgb(70, 70, 70);
+}
+
+footer .item,
+footer .mainItem
+{
+  color: white;
+}
+
+.bottomMenu .item {
+  opacity: 0.7;
+}
+.bottomMenu .item:hover {
+  opacity: 1;
+}
+.bottomMenu .item:active {
+  opacity: 0.3;
+}
+
+footer .item.noHover:active,
+footer .item.noHover:hover
+{
+  color: white;
+  opacity: 1;
+}
+
+.social
+{
+  opacity: 0.3;
+}
+
+.social:hover,
+.htmlAcademy:hover
+{
+  opacity: 0.6;
+}
+
+.htmlAcademy:active{
+  opacity: 0.3;
+}
+
+.social:active {
+  opacity: 0.1;
 }
