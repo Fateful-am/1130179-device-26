@@ -3,57 +3,91 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс-Моноподы для селфи</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a class="topLogo" href="index.html">
-        <img class="hovering" src="img/logo-device.svg" alt="Девайс" width="164" height="35">
-      </a>
-      <nav>
-        <div class="container">
-          <form class="searchControl halfMenu" action="https://echo.htmlacademy.ru/" method="POST">
-            <span class="iconed searchIcon"></span>
-            <input class="text searchText hovering" type="search" name="searchText" placeholder="Поиск по сайту">
-            <button class="text searchButton hovering" type="submit">Найти</button>
+    <div class="b-container">
+      <header class="b-header b-header__inner">
+        <a class="b-header__logo b-header__logo--state-active" href="index.html">
+          <img src="img/logo-device.svg" width="163" height="36" alt="Девайс">
+        </a>
+        <div class="b-header__half-block">
+          <form class="b-header__search-wrapper" action="https://echo.htmlacademy.ru/" method="post">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+              <path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/>
+            </svg>
+            <input class="b-header__search-input" type="text" placeholder="Поиск по сайту">
+            <button class="b-header__search-button">Найти</button>
           </form>
-          <ul class="list halfMenu">
-            <li class="login">
-              <a class="text hovering iconed" href="">Валентин Петухов</a>
-            </li>
-            <li class="logout">
-              <button class="text hovering" type="button">Выйти</button>
-            </li>
-            <li class="compare">
-              <a class="text hovering iconed" href="">Сравнить</a>
-            </li>
-            <li class="cart">
-              <a class="text hovering iconed" href="">Корзина</a>
-            </li>
-          </ul>
-        </div>
-        <div class="container">
-          <ul class="list halfMenu">
-            <li class="mainItem menuCatalog">Каталог товаров
-              <ul class="list subMenu">
-                <li><a class="text hovering" href="inner.html">Виртуальная реальность</a></li>
-                <li><a class="text hovering" href="inner.html">Моноподы для селфи</a></li>
-                <li><a class="text hovering" href="inner.html">Экшн-камеры</a></li>
-                <li><a class="text hovering" href="inner.html">Фитнес-браслеты</a></li>
-                <li><a class="text hovering" href="inner.html">Умные часы</a></li>
-                <li><a class="text hovering"</a></li>
-                <li><a class="text hovering" href="inner.html">Квадрокоптеры</a></li>
+          <div class="b-header__nav-wrapper">
+            <a class="b-header__nav-link b-header__nav-link--main" href="inner.html">
+              Каталог товаров
+            </a>
+            <div class="b-header__nav-sublist-wrapper">
+              <ul class="b-header__nav-sublist">
+                <li>
+                  <a href="#" class="b-header__sublist-link">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="#" class="b-header__sublist-link">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#" class="b-header__sublist-link">Экшн-камеры</a>
+                </li>
               </ul>
-            </li>
-          </ul>
-          <ul class="list halfMenu">
-            <li class="menuDeliver"><a class="mainItem" href="#">Доставка</a></li>
-            <li><a class="mainItem" href="#">Гарантия</a></li>
-            <li class="menuContacts"><a class="mainItem" href="#">Контакты</a></li>
-          </ul>
+              <ul class="b-header__nav-sublist">
+                <li>
+                  <a href="#" class="b-header__sublist-link">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a href="#" class="b-header__sublist-link">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="b-header__nav-sublist b-header__nav-sublist--right">
+                <li>
+                  <a href="#" class="b-header__sublist-link">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </nav>
-    </header>
+        <nav class="b-header__half-block">
+          <div class="b-header__action-block">
+            <ul class="b-header__action-list b-header__action-list-left">
+              <li class="b-header__action-list-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                <a class="b-header__action-link" href="#">Валентин Петухов</a>
+              </li>
+              <li class="b-header__action-list-item b-header__action-list-item--exit">
+                <a class="b-header__action-link" href="#">Выйти</a>
+              </li>
+            </ul>
+            <ul class="b-header__action-list">
+              <li class="b-header__action-list-item">
+                <svg class="b-header__compare-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+                <a class="b-header__action-link" href="#">Сравнить</a>
+              </li>
+              <li class="b-header__action-list-item b-header__action-list-item--cart">
+                <svg class="b-header__cart-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+                <a class="b-header__action-link" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+          <div class="b-header__nav-wrapper b-header__nav-wrapper--right">
+            <a href="inner.html" class="b-header__nav-link">
+              Доставка
+            </a>
+            <a href="inner.html" class="b-header__nav-link">
+              Гарантия
+            </a>
+            <a href="inner.html" class="b-header__nav-link b-header__nav-link--no-padding">
+              Контакты
+            </a>
+          </div>
+        </nav>
+      </header>
+    </div>
     <div>
       <!-- content-container -->
       <h2 class="visually-hidden">Товары раздела</h2>
@@ -253,5 +287,6 @@
       <p>Введите пожалуйста свой логин и пароль.</p>
       <button type="button">Закрыть</button>
     </section> -->
+    <script src="js/main.js"></script>
   </body>
 </html>
