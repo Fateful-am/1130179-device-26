@@ -370,6 +370,7 @@ body {
   background-image: url("../img/slider-button-empty.svg");
   background-size: 12px 12px;
   cursor: pointer;
+  outline: none;
   /* tabindex: 0; */
 }
 
