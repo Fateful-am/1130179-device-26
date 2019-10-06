@@ -4,6 +4,9 @@ var searchButton  = document.getElementsByClassName('b-header__search-button')[0
 var promoSlides = document.getElementsByClassName('b-promo')
 var promoButtons = document.getElementsByClassName('b-promo__slide-button')
 
+var serviceSlides = document.getElementsByClassName('b-services__detail-container')
+var serviceButtons = document.getElementsByClassName('b-services__button')
+
 function toggleElement(element, classToggle) {
   element.addEventListener('click', function() {
     this.classList.toggle(classToggle);
@@ -24,11 +27,12 @@ function slideSwitch(element, butClassToggle, slideClassToggle, btns, slides) {
   });
 }
 
-function toggleSlides(butList, promoList, btns, slides) {
-  for (var i = 0; i < butList.length; i++) {
-    slideSwitch(butList[i], 'b-promo__slide-button--active', 'b-promo--hide', btns, slides);
+function toggleSlides(butActiveClass, slideHideClass, btns, slides) {
+  for (var i = 0; i < btns.length; i++) {
+    slideSwitch(btns[i], butActiveClass, slideHideClass, btns, slides);
   }
 }
 
 toggleElement(searchWrapper, 'b-header__search-wrapper--state-active' );
-toggleSlides(promoButtons, promoSlides, promoButtons, promoSlides);
+toggleSlides('b-promo__slide-button--active', 'b-promo--hide', promoButtons, promoSlides);
+toggleSlides('b-services__button--active', 'b-services__detail-container--hide', serviceButtons, serviceSlides);

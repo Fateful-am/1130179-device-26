@@ -336,9 +336,8 @@ body {
 
 .b-promo-wrapper {
   position: relative;
-
+  margin-bottom: -100px;
   height: 580px;
-  background-color: pink;
   background-color: white;
 }
 
@@ -371,13 +370,11 @@ body {
   background-size: 12px 12px;
   cursor: pointer;
   outline: none;
-  /* tabindex: 0; */
 }
 
 .b-promo__slide-button--active {
   background-image: url("../img/slider-button.svg");
 }
-
 
 .b-promo {
   position: absolute;
@@ -521,17 +518,389 @@ abbr {
   font-size: 13px;
   color: #464646;
 }
+
+.b-popular {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  list-style: none;
+  margin-top: 1px;
+}
+
+.b-popular__item {
+  display: flex;
+  width: 160px;
+}
+
+.b-popular__link {
+  position: relative;
+
+  font-size: 18px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  color: black;
+}
+
+.b-popular__image-wrapper{
+  position: relative;
+  margin-bottom: 33px;
+  width: 160px;
+  height: 160px;
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.b-popular__link:hover {
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 1) 0px, rgba(240, 197, 46, 1) 160px, #ffffff 160px);
+}
+
+.b-popular__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.b-popular__link:active .b-popular__image{
+  opacity: 0.3;
+}
+
+.b-popular__link h3{
+  font: inherit;
+}
+
+.b-popular__image{
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 1px;
+  bottom: 1px;
+  left: 0;
+}
+
+.b-popular__image--monopod{
+  top: 40px;
+  left: 2px;
+}
+
+.b-popular__image--actioncam{
+  top: 4px;
+  left: 10px;
+}
+
+.b-popular__image--fitnbra{
+  top: 6px;
+  left: 4px;
+}
+
+.b-popular__image--smartclock{
+  top: 2px;
+  left: 6px;
+}
+
+.b-popular__image--qwadro{
+  top: 8px;
+  left: -2px;
+}
+
+.b-container-wide {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.b-container-wide--services {
+  position: relative;
+  height: 288px;
+  margin-top: 163px;
+  background-color: #e5e5e5;
+}
+
+.b-services {
+  position: relative;
+  top: -100px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.b-services__button-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 284px;
+  height: 319px;
+  border-right: 7px solid black;
+}
+
+.b-services__list-item {
+  height: 60px;
+  margin-top: 6px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+
+.b-services__button {
+  width: 160px;
+  height: 40px;
+
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  letter-spacing: 3.7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  border: none;
+  background-color: transparent;
+  background-image: linear-gradient(to top, #f4d361 1px, #f0c52e, #f0c52e 1px);
+  background-repeat: no-repeat;
+  background-size: auto 8px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.b-services__button:hover
+{
+  background-color: #f0c52e;
+  background-image: none;
+  color: #00000;
+}
+
+.b-services__button--active,
+.b-services__button--active:hover{
+  position: relative;
+  color: #f7e184;
+  background-color: #000000;
+  background-image: none;
+  cursor: default;
+  outline: none;
+}
+
+.b-services__button--active::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -117px;
+  width: 117px;
+  height: 40px;
+  background-color: #000000;
+}
+
+.b-services__detail-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.b-services__detail-container--hide {
+  display: none;
+}
+
+.b-services__detail-container::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 195px;
+}
+
+.b-services__detail-delivery::after {
+  top: 85px;
+  right: 22px;
+  background: url("../img/delivery.svg") no-repeat;
+}
+
+.b-services__detail-warranty::after {
+  top: 61px;
+  right: 37px;
+  background: url("../img/warranty.svg") no-repeat;
+}
+
+.b-services__detail-credit::after {
+  background: url("../img/credit.svg") no-repeat;
+  top: 61px;
+  right: 46px;
+}
+
+.b-services__detail-header {
+  position: absolute;
+  top: 74px;
+  left: 117px;
+
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 47px;
+  font-family: 'Gilroy', Arial, sans-serif;
+}
+
+.b-services__detail-content {
+  position: absolute;
+  top: 152px;
+  left: 115px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.b-logos {
+  margin-top: 94px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.b-logos img{
+  opacity: 0.2;
+  filter: grayscale(1);
+}
+
+.b-logos img:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.b-about-as__half-block{
+  position: relative;
+  padding-top: 139px;
+  width: 560px;
+}
+
+.b-about-us {
+  min-height: 746px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.b-about-us__decorate-line {
+  position: absolute;
+  margin: 0;
+  width: 80px;
+  height: 7px;
+  top: 91px;
+  left: 0px;
+  background-color: #000000;
+  border-style: none;
+}
+
+.b-about-us__header {
+  margin-left: -2px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  font-size: 47px;
+  font-family: 'Gilroy', Arial, sans-serif;
+
+  line-height: 56px;
+  letter-spacing: 0.5px;
+}
+
+.b-about-us__content {
+  padding-top: 30px;
+  margin-left: -1px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+}
+
+.b-about-us__content--2 {
+  letter-spacing: -0.5px;
+}
+
+.b-about-us__transport-company {
+  margin-top: 66px;
+  margin-bottom: 90px;
+  margin-left: 35px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  line-height: 40px;
+}
+
+.b-about-us__transport-company li {
+  position: relative;
+}
+
+.b-about-us__transport-company li::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -34px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.b-about-us__map {
+  margin-top: 39px;
+}
+
+.b-about-us__button {
+  display: block;
+  position: absolute;
+  bottom: 82px;
+  left: 2px;
+  width: 260px;
+  height: 40px;
+
+  padding: 0;
+  line-height: 40px;
+
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  letter-spacing: 3.7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+  border: none;
+  background-color: transparent;
+  background-image: linear-gradient(to top, #f4d361 1px, #f0c52e, #f0c52e 1px);
+  background-repeat: no-repeat;
+  background-size: auto 8px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.b-about-us__button:hover,
+.b-about-us__button:active {
+  background-color: #f0c52e;
+  background-image: none;
+}
+
+.b-about-us__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 /* ниже не проверять */
-
-
-
-
-
-
-
-
-
-
 
 
 
