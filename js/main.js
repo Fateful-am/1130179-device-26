@@ -23,7 +23,6 @@ function slideSwitch(element, butClassToggle, slideClassToggle, btns, slides) {
         slides[i].classList.toggle(slideClassToggle, false);
       }
     }
-    this.classList.toggle(classToggle);
   });
 }
 
