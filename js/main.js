@@ -1,31 +1,31 @@
-var searchInput = document.getElementsByClassName('g-header__search-input')[0];
-var searchButton  = document.getElementsByClassName('g-header__search-button')[0];
+var searchInput = document.getElementsByClassName('b-header__search-input')[0];
+var searchButton  = document.getElementsByClassName('b-header__search-button')[0];
 
-var promoSlides = document.getElementsByClassName('g-promo')
-var promoButtons = document.getElementsByClassName('g-promo__slide-button')
+var promoSlides = document.getElementsByClassName('b-promo')
+var promoButtons = document.getElementsByClassName('b-promo__slide-button')
 
-var serviceSlides = document.getElementsByClassName('g-services__detail-container')
-var serviceButtons = document.getElementsByClassName('g-services__button')
+var serviceSlides = document.getElementsByClassName('b-services__detail-container')
+var serviceButtons = document.getElementsByClassName('b-services__button')
 
-var closeMapButton = document.getElementsByClassName('g-modal-close-button--map')[0];
-var openMapButton = document.getElementsByClassName('g-about-us--map')[0];
-var modalFormMap = document.getElementsByClassName('g-modal--map')[0];
+var closeMapButton = document.getElementsByClassName('b-modal-close-button--map')[0];
+var openMapButton = document.getElementsByClassName('b-about-us--map')[0];
+var modalFormMap = document.getElementsByClassName('b-modal--map')[0];
 
-var closeFeedbackButton = document.getElementsByClassName('g-modal-close-button--feedback')[0];
-var openFeedbackButton = document.getElementsByClassName('g-about-us--feedback')[0];
-var modalFormFeedback = document.getElementsByClassName('g-modal--feedback')[0];
+var closeFeedbackButton = document.getElementsByClassName('b-modal-close-button--feedback')[0];
+var openFeedbackButton = document.getElementsByClassName('b-about-us--feedback')[0];
+var modalFormFeedback = document.getElementsByClassName('b-modal--feedback')[0];
 
 var feedbackForm = elementForm = document.querySelector('#feedback-form');
 
 function toggleSearch(input, button) {
   input.addEventListener('focus', function() {
-    this.classList.toggle('g-header__search-input--focused', true);
-    button.classList.toggle('g-header__search-button--active', true);
+    this.classList.toggle('b-header__search-input--focused', true);
+    button.classList.toggle('b-header__search-button--active', true);
   });
   input.addEventListener('blur', function() {
     if (!button.classList.contains('mouse-over')) {
-      this.classList.toggle('g-header__search-input--focused', false);
-      button.classList.toggle('g-header__search-button--active', false);
+      this.classList.toggle('b-header__search-input--focused', false);
+      button.classList.toggle('b-header__search-button--active', false);
     }
   });
   button.addEventListener('mouseover', function() {
@@ -76,13 +76,13 @@ function submitFeedBack(submitForm, modalForm, hideClass) {
 
 toggleSearch(searchInput, searchButton);
 
-toggleSlides('g-promo__slide-button--active', 'g-promo--hide', promoButtons, promoSlides);
-toggleSlides('g-services__button--active', 'g-services__detail-container--hide', serviceButtons, serviceSlides);
+toggleSlides('b-promo__slide-button--active', 'b-promo--hide', promoButtons, promoSlides);
+toggleSlides('b-services__button--active', 'b-services__detail-container--hide', serviceButtons, serviceSlides);
 
-showHideToggle(closeMapButton, modalFormMap, 'g-modal--hide', false);
-showHideToggle(openMapButton, modalFormMap, 'g-modal--hide', true);
+showHideToggle(closeMapButton, modalFormMap, 'b-modal--hide', false);
+showHideToggle(openMapButton, modalFormMap, 'b-modal--hide', true);
 
-showHideToggle(closeFeedbackButton, modalFormFeedback, 'g-modal--hide', false);
-showHideToggle(openFeedbackButton, modalFormFeedback, 'g-modal--hide', true);
+showHideToggle(closeFeedbackButton, modalFormFeedback, 'b-modal--hide', false);
+showHideToggle(openFeedbackButton, modalFormFeedback, 'b-modal--hide', true);
 
-submitFeedBack(feedbackForm, modalFormFeedback, 'g-modal--hide');
+submitFeedBack(feedbackForm, modalFormFeedback, 'b-modal--hide');
